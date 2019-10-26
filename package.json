@@ -8,13 +8,17 @@
     "handlebars": "^4.0.5",
     "handlebars-layouts": "^3.1.3",
     "marlin": "^1.0.0",
+    "node-l": "^2.1.1",
     "node-sass": "^3.4.2",
     "node-static": "^0.7.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "deploy-aws-s3-cloudfront": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "deploy-aws-s3-cloudfront --source build/home --distribution EU0BEE8SOEJIQ --bucket adleria.com"
   },
   "repository": {
     "type": "git",
